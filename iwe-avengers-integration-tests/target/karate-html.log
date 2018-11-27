@@ -1,27 +1,39 @@
-20:28:01.971 karate.env system property was: null 
-20:28:02.222 request:
-1 > GET https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
+22:17:42.052 karate.env system property was: null 
+22:17:42.299 request:
+1 > GET https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers/no-found-id
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: hqargrkoc4.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-20:28:03.005 response time in milliseconds: 782
+22:17:43.083 response time in milliseconds: 782
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 306
+1 < Content-Type: application/json
+1 < Date: Tue, 27 Nov 2018 00:16:58 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bfc8cfa-880bdee263b2c41098d76176;Sampled=0
+1 < x-amz-apigw-id: Q_r3MH1IIAMFXUA=
+1 < x-amzn-RequestId: c159e071-f1d9-11e8-b8dc-5fa8884d69ac
+{"errorMessage":"[NotFound] - Avenger id: no-found-id","errorType":"com.iwe.avenger.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:30)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+
+1 > Host: hqargrkoc4.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+21:59:39.395 response time in milliseconds: 458
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 98
+1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Thu, 22 Nov 2018 22:27:19 GMT
-1 < x-amz-apigw-id: QyQDOGfXIAMFSjA=
-1 < x-amzn-RequestId: c64c16d1-eea5-11e8-9bfd-dfb406aceda9
-{
-    "id": "aaaa-bbbb-ccccc-dddd", 
-    "name": "Iron Man", 
-    "secretIdentity": "Tony Stark"
-}
+1 < Date: Mon, 26 Nov 2018 23:58:55 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bfc88bf-74e8a400a18976c05fc999c0;Sampled=0
+1 < x-amz-apigw-id: Q_pN4F6BoAMFakQ=
+1 < x-amzn-RequestId: 3b720212-f1d7-11e8-ae0a-afb1446a0c36
 
-20:28:03.053 karate.env system property was: null 
-20:28:03.058 request:
+
+21:59:39.395 status code was: 200, expected: 404, response time: 458, url: https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers/no-found-id, response: 
+21:59:39.411 karate.env system property was: null 
+21:59:39.411 request:
 1 > POST https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -31,22 +43,19 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Iron Man","secretIdentity":"Tony Stark"}
 
-20:28:03.529 response time in milliseconds: 471
+21:59:41.988 response time in milliseconds: 2577
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 92
+1 < Content-Length: 63
 1 < Content-Type: application/json
-1 < Date: Thu, 22 Nov 2018 22:27:20 GMT
-1 < x-amz-apigw-id: QyQDUEAkoAMFqPw=
-1 < x-amzn-RequestId: c69f19ca-eea5-11e8-bf67-271c90945448
-{
-  "id" : "aaaa-bbbb-cccc-dddd",
-  "name" : "Iron Man",
-  "secretIdentity" : "Tony Stark"
-}
+1 < Date: Mon, 26 Nov 2018 23:58:57 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bfc88bf-e327b29c776430b0730c0ef0;Sampled=0
+1 < x-amz-apigw-id: Q_pN9EuEIAMFi-g=
+1 < x-amzn-RequestId: 3bbb66f6-f1d7-11e8-9255-1f92fea944d7
+{"id":"64aaaa","name":"Iron Man","secretIdentity":"Tony Stark"}
 
-20:28:03.544 karate.env system property was: null 
-20:28:03.546 request:
+21:59:42.000 karate.env system property was: null 
+21:59:42.000 request:
 1 > POST https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -56,35 +65,35 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Tony Stark"}
 
-20:28:04.081 response time in milliseconds: 534
+21:59:42.447 response time in milliseconds: 447
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Thu, 22 Nov 2018 22:27:20 GMT
-1 < x-amz-apigw-id: QyQDZHjJoAMF7BA=
-1 < x-amzn-RequestId: c6ef8371-eea5-11e8-a54b-b38c1dcc9b0c
+1 < Date: Mon, 26 Nov 2018 23:58:58 GMT
+1 < x-amz-apigw-id: Q_pOXFLCIAMFTzQ=
+1 < x-amzn-RequestId: 3d45d787-f1d7-11e8-bcb3-d5d1a16baf14
 {"message": "Invalid request body"}
 
-20:28:04.102 karate.env system property was: null 
-20:28:04.105 request:
+21:59:42.462 karate.env system property was: null 
+21:59:42.462 request:
 1 > DELETE https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: hqargrkoc4.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-20:28:04.551 response time in milliseconds: 445
+21:59:42.900 response time in milliseconds: 438
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Thu, 22 Nov 2018 22:27:21 GMT
-1 < x-amz-apigw-id: QyQDeFM0IAMFVBw=
-1 < x-amzn-RequestId: c73b31cf-eea5-11e8-8fc6-2764154ce7be
+1 < Date: Mon, 26 Nov 2018 23:58:58 GMT
+1 < x-amz-apigw-id: Q_pObFjwIAMFZPQ=
+1 < x-amzn-RequestId: 3d8b1d92-f1d7-11e8-83a9-63a0bad32e9b
 
-20:28:04.562 karate.env system property was: null 
-20:28:04.564 request:
+21:59:42.915 karate.env system property was: null 
+21:59:42.915 request:
 1 > PUT https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -94,22 +103,22 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Iron Man","secretIdentity":"Tony Stark"}
 
-20:28:05.036 response time in milliseconds: 472
+21:59:43.354 response time in milliseconds: 439
 1 < 200
 1 < Connection: keep-alive
 1 < Content-Length: 92
 1 < Content-Type: application/json
-1 < Date: Thu, 22 Nov 2018 22:27:21 GMT
-1 < x-amz-apigw-id: QyQDjF0VoAMFfDQ=
-1 < x-amzn-RequestId: c784707e-eea5-11e8-811d-99eb9d225c5a
+1 < Date: Mon, 26 Nov 2018 23:58:59 GMT
+1 < x-amz-apigw-id: Q_pOgEg7oAMF5vA=
+1 < x-amzn-RequestId: 3dcf7a15-f1d7-11e8-9685-632656f87ef9
 {
   "id" : "aaaa-bbbb-cccc-dddd",
   "name" : "Iron Man",
   "secretIdentity" : "Tony Stark"
 }
 
-20:28:05.047 karate.env system property was: null 
-20:28:05.050 request:
+21:59:43.360 karate.env system property was: null 
+21:59:43.360 request:
 1 > PUT https://hqargrkoc4.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -119,23 +128,17 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Tony Stark"}
 
-20:28:05.531 response time in milliseconds: 480
+21:59:43.813 response time in milliseconds: 453
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Thu, 22 Nov 2018 22:27:22 GMT
-1 < x-amz-apigw-id: QyQDoGh1oAMFX2A=
-1 < x-amzn-RequestId: c7cf5b8d-eea5-11e8-a9c7-03f8f552cca1
+1 < Date: Mon, 26 Nov 2018 23:58:59 GMT
+1 < x-amz-apigw-id: Q_pOkH-gIAMFlbA=
+1 < x-amzn-RequestId: 3e1423dd-f1d7-11e8-9046-1500c762dba3
 {"message": "Invalid request body"}
 
-              <ol>
-                    <li class="signin">
-                        <a href="https://www.marvel.com/signin">
-                            <svg class="desktop-signin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.6 66.7"><path fill-rule="evenodd" d="M59.5 15.1L53 51.4c0 .4-.3.6-.6.6h-6.5c-.3 0-.6-.2-.8-.6l-8.8-24.7H36l-4.3 24.7c-.1.3-.3.6-.6.6H25c-.3 0-.6-.2-.5-.6l6.6-37.3c.1-.3.3-.6.6-.6h6.4c.5 0 .7.2.8.6l8.8 24.7h.3l5.5-30.4C47.9 3.7 40.6.9 32.7.9 14.7.9.2 15.5.2 33.4c0 8.8 3.5 16.7 9.1 22.5l7.3-41.7c.1-.3.3-.6.6-.6H24c.3 0 .5.2.5.6l-8.3 47.2c4.8 2.8 10.4 4.5 16.4 4.5 17.9 0 32.5-14.5 32.5-32.5 0-6.8-2.1-13.1-5.6-18.3z"></path></svg>
-                            <svg class="mobile-signin" xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16"><g fill-rule="evenodd"><path d="M0 14h24v2H0zM0 8h24v2H0zM0 2h24v2H0z"></path></g></svg>
-                            <span>Sign In</span></a>
-                    
+        
                     </li>
                     <a id="marvel-logo" href="https://www.marvel.com"></a>
                     <li class="search">

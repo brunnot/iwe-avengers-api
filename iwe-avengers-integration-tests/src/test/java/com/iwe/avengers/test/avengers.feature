@@ -10,6 +10,12 @@ When method get
 Then status 200
 And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
 
+Scenario: Should return not found Avenger
+
+Given path 'avengers','no-found-id'
+When method get
+Then status 404
+
 Scenario: Create Avenger
 
 Given path 'avengers'
@@ -17,7 +23,6 @@ And request {name: 'Iron Man', secretIdentity: 'Tony Stark'}
 When method post
 Then status 201
 And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
-
 
 Scenario: Must return 400 for invalid creation payload
 
